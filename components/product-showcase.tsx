@@ -45,8 +45,8 @@ export function ProductShowcase() {
             { icon: BarChart3, title: "Flow Analytics", desc: "Real-time decision-making data via comprehensive engineering dashboards.", color: "#d4a574" },
             { icon: Zap, title: "24/7 Reliability", desc: "Constant orchestration support ensuring your systems never skip a beat.", color: "#e8a599" }
           ].map((feature, i) => (
-            <div key={i} className="group relative rounded-2xl border border-white/5 bg-white/5 p-8 transition-all hover:border-[#d4a574]/40 hover:bg-[#d4a574]/5">
-              <div className="mb-6 inline-flex rounded-xl bg-black p-3 shadow-inner border border-white/10">
+            <div key={i} className="group relative rounded-2xl border border-[#d4a574]/30 bg-[#d4a574]/5 p-8 shadow-[0_0_15px_rgba(212,165,116,0.15)] transition-all hover:border-[#d4a574]/60 hover:shadow-[0_0_25px_rgba(212,165,116,0.25)]">
+              <div className="mb-6 inline-flex rounded-xl bg-black p-3 shadow-inner border border-[#d4a574]/20 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="h-6 w-6" style={{ color: feature.color }} />
               </div>
               <h3 className="mb-3 text-lg font-bold text-white uppercase tracking-tight">{feature.title}</h3>
@@ -55,8 +55,8 @@ export function ProductShowcase() {
           ))}
         </div>
 
-        {/* Main Product Card: SMART QR MENU (ID ADDED HERE) */}
-        <div id="smart-qr-menu" className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black shadow-2xl">
+        {/* Main Product Card: SMART QR MENU */}
+        <div id="smart-qr-menu" className="relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)] transition-all duration-500 hover:border-[#d4a574]/50 hover:shadow-[0_0_40px_rgba(212,165,116,0.25)]">
           <div className="grid gap-0 md:grid-cols-2">
             
             {/* Left Content: The Logic */}
@@ -125,7 +125,7 @@ export function ProductShowcase() {
 
               <button
                 onClick={scrollToArchitecture}
-                className="group inline-flex items-center justify-center gap-3 rounded-full px-10 py-4 text-sm font-black text-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95"
+                className="group inline-flex items-center justify-center gap-3 rounded-full px-10 py-4 text-sm font-black text-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(212,165,116,0.3)]"
                 style={{ background: 'linear-gradient(135deg, #d4a574 0%, #b88a5e 100%)' }}
               >
                 Explore Architecture
@@ -144,7 +144,7 @@ export function ProductShowcase() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute bottom-10 right-10 rotate-12 opacity-10">
+              <div className="absolute bottom-10 right-10 rotate-12 opacity-10 pointer-events-none">
                 <span className="text-8xl font-black text-white tracking-tighter italic">VARDHAN</span>
               </div>
             </div>

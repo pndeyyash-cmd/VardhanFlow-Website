@@ -22,7 +22,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#d4a574]/10 bg-[#0a0a0a]/95 backdrop-blur-xl" style={{ height: '70px' }}>
+    <header className="sticky top-0 z-50 border-b border-[#d4a574]/10 bg-[#0a0a0a]/90 backdrop-blur-xl transition-all duration-300" style={{ height: '70px' }}>
       {/* CLASSY COPPER AMBIENT GLOW */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4a574]/5 to-transparent pointer-events-none" />
 
@@ -33,7 +33,7 @@ export function Header() {
           className="flex items-center cursor-pointer group" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <div className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-[#d4a574] bg-white shadow-[0_0_20px_rgba(212,165,116,0.25)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[#d4a574]/40">
+          <div className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-[#d4a574] bg-black shadow-[0_0_20px_rgba(212,165,116,0.25)] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(212,165,116,0.4)]">
             <Image 
               src="/logo.jpg" 
               alt="VardhanFlow" 
@@ -46,14 +46,14 @@ export function Header() {
 
         {/* DESKTOP NAVIGATION - High-End Spacing */}
         <div className="hidden items-center gap-10 md:flex">
-          <button onClick={() => scrollToSection('products')} className="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400 hover:text-[#d4a574] transition-all">Products</button>
-          <button onClick={() => scrollToSection('about')} className="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400 hover:text-[#d4a574] transition-all">About Us</button>
-          <button onClick={() => scrollToSection('architecture')} className="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400 hover:text-[#d4a574] transition-all">Architecture</button>
+          <button onClick={() => scrollToSection('products')} className="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] transition-all duration-300">Products</button>
+          <button onClick={() => scrollToSection('about')} className="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] transition-all duration-300">About Us</button>
+          <button onClick={() => scrollToSection('architecture')} className="text-[10px] font-black uppercase tracking-[0.25em] text-zinc-400 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] transition-all duration-300">Architecture</button>
           <a
             href="https://wa.me/918874377426"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full px-8 py-2.5 text-[10px] font-black text-black tracking-[0.15em] transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#d4a574]/10"
+            className="rounded-full px-8 py-2.5 text-[10px] font-black text-black tracking-[0.15em] transition-all hover:scale-105 active:scale-95 shadow-xl shadow-[#d4a574]/20"
             style={{ background: 'linear-gradient(135deg, #d4a574 0%, #b88a5e 100%)' }}
           >
             CUSTOM INTEGRATION
@@ -61,20 +61,40 @@ export function Header() {
         </div>
 
         {/* MOBILE MENU TOGGLE */}
-        <button onClick={() => setIsOpen(!isOpen)} className="text-[#d4a574] md:hidden p-2">
+        <button 
+          onClick={() => setIsOpen(!isOpen)} 
+          className="text-[#d4a574] md:hidden p-2 transition-transform duration-300 active:scale-90"
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* MOBILE DRAWER */}
+        {/* MOBILE DRAWER (Upgraded to Glassmorphism) */}
         {isOpen && (
-          <div className="absolute left-0 right-0 top-[70px] border-b border-[#d4a574]/20 bg-[#0d0d0d] p-8 md:hidden animate-in fade-in slide-in-from-top-4">
-            <div className="flex flex-col gap-8">
-              <button onClick={() => scrollToSection('products')} className="text-xs font-black tracking-widest text-zinc-300 text-left uppercase">Products</button>
-              <button onClick={() => scrollToSection('about')} className="text-xs font-black tracking-widest text-zinc-300 text-left uppercase">About Us</button>
-              <button onClick={() => scrollToSection('architecture')} className="text-xs font-black tracking-widest text-zinc-300 text-left uppercase">Architecture</button>
+          <div className="absolute left-0 right-0 top-[70px] border-b border-[#d4a574]/20 bg-[#0a0a0a]/95 backdrop-blur-xl p-8 md:hidden animate-in fade-in slide-in-from-top-4 duration-300 shadow-2xl">
+            <div className="flex flex-col gap-6">
+              <button 
+                onClick={() => scrollToSection('products')} 
+                className="text-xs font-black tracking-[0.2em] text-zinc-300 text-left uppercase py-2 border-b border-white/5 hover:text-[#d4a574] transition-colors"
+              >
+                Products
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')} 
+                className="text-xs font-black tracking-[0.2em] text-zinc-300 text-left uppercase py-2 border-b border-white/5 hover:text-[#d4a574] transition-colors"
+              >
+                About Us
+              </button>
+              <button 
+                onClick={() => scrollToSection('architecture')} 
+                className="text-xs font-black tracking-[0.2em] text-zinc-300 text-left uppercase py-2 border-b border-white/5 hover:text-[#d4a574] transition-colors"
+              >
+                Architecture
+              </button>
               <a
                 href="https://wa.me/918874377426"
-                className="flex h-14 items-center justify-center rounded-xl text-xs font-black tracking-widest text-black"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 flex h-14 items-center justify-center rounded-xl text-[11px] font-black tracking-[0.2em] text-black shadow-lg shadow-[#d4a574]/20 transition-transform active:scale-95"
                 style={{ background: 'linear-gradient(135deg, #d4a574 0%, #b88a5e 100%)' }}
               >
                 CUSTOM INTEGRATION

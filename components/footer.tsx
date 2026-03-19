@@ -17,15 +17,17 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-[#d4a574]/10 bg-[#050505] px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="absolute top-0 right-0 h-[300px] w-[300px] bg-[#d4a574]/5 blur-[100px] pointer-events-none" />
+    <footer className="relative border-t border-[#d4a574]/20 bg-[#050505] px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Enhanced ambient glow */}
+      <div className="absolute top-0 right-0 h-[400px] w-[400px] bg-[#d4a574]/5 blur-[120px] pointer-events-none" />
       
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4 mb-20">
           
+          {/* Brand Column */}
           <div className="space-y-6">
-            <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <div className="relative h-10 w-10 overflow-hidden rounded-full border border-[#d4a574]/40 bg-white shadow-[0_0_15px_rgba(212,165,116,0.2)] transition-transform group-hover:scale-110">
+            <div className="flex items-center gap-4 group cursor-pointer w-fit" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <div className="relative h-10 w-10 overflow-hidden rounded-full border border-[#d4a574]/40 bg-black shadow-[0_0_20px_rgba(212,165,116,0.15)] transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_25px_rgba(212,165,116,0.3)]">
                 <Image 
                   src="/logo.jpg" 
                   alt="VF" 
@@ -33,83 +35,94 @@ export function Footer() {
                   className="object-cover scale-110"
                 />
               </div>
-              <span className="text-xl font-black tracking-tighter text-white uppercase italic">Vardhan<span className="text-[#d4a574]">Flow</span></span>
+              <span className="text-xl font-black tracking-tighter text-white uppercase italic transition-colors group-hover:text-gray-200">
+                Vardhan<span className="text-[#d4a574]">Flow</span>
+              </span>
             </div>
-            <p className="text-sm font-medium leading-relaxed text-zinc-500">
+            <p className="text-sm font-medium leading-relaxed text-zinc-500 max-w-xs">
               Engineering the future of digital flow with enterprise-grade integration and high-sovereignty orchestration.
             </p>
           </div>
 
+          {/* Ecosystem Links */}
           <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">Ecosystem</h4>
             <ul className="space-y-4 text-xs font-bold uppercase tracking-widest text-zinc-400">
               <li>
-                <button onClick={() => scrollTo('smart-qr-menu')} className="transition-colors hover:text-[#d4a574] text-left">
+                <button onClick={() => scrollTo('smart-qr-menu')} className="transition-all duration-300 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] text-left">
                   Smart QR Menus
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('architecture')} className="transition-colors hover:text-[#d4a574] text-left">
+                <button onClick={() => scrollTo('architecture')} className="transition-all duration-300 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] text-left">
                   Corporate Web Services
                 </button>
               </li>
               <li>
-                <a href="https://wa.me/918874377426" target="_blank" className="transition-colors hover:text-[#d4a574]">
+                <a href="https://wa.me/918874377426" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)]">
                   Custom Engineering
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Governance Links */}
           <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">Governance</h4>
             <ul className="space-y-4 text-xs font-bold uppercase tracking-widest text-zinc-400">
               <li>
-                <button onClick={() => scrollTo('about')} className="transition-colors hover:text-[#d4a574] text-left">
+                <button onClick={() => scrollTo('about')} className="transition-all duration-300 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] text-left">
                   About Infrastructure
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('faq')} className="transition-colors hover:text-[#d4a574] text-left">
+                <button onClick={() => scrollTo('faq')} className="transition-all duration-300 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] text-left">
                   FAQ
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo('privacy')} className="transition-colors hover:text-[#d4a574] text-left">
+                <button onClick={() => scrollTo('privacy')} className="transition-all duration-300 hover:text-[#d4a574] hover:drop-shadow-[0_0_8px_rgba(212,165,116,0.5)] text-left">
                   Privacy Policy
                 </button>
               </li>
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">Contact Us</h4>
             <div className="space-y-4">
               <a
                 href="mailto:support@vardhanflow.com"
-                className="flex items-center gap-3 text-xs font-bold text-zinc-400 transition-colors hover:text-[#d4a574]"
+                className="group flex items-center gap-3 text-xs font-bold text-zinc-400 transition-colors hover:text-[#d4a574]"
               >
-                <div className="p-2 rounded-lg bg-white/5 border border-white/5"><Mail size={14} /></div>
+                <div className="p-2 rounded-lg bg-black border border-[#d4a574]/20 shadow-inner transition-all duration-300 group-hover:border-[#d4a574]/50 group-hover:shadow-[0_0_10px_rgba(212,165,116,0.2)]">
+                  <Mail size={14} className="text-zinc-500 group-hover:text-[#d4a574] transition-colors" />
+                </div>
                 support@vardhanflow.com
               </a>
               <a
                 href="https://wa.me/918874377426"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-xs font-bold text-zinc-400 transition-colors hover:text-[#d4a574]"
+                className="group flex items-center gap-3 text-xs font-bold text-zinc-400 transition-colors hover:text-[#d4a574]"
               >
-                <div className="p-2 rounded-lg bg-white/5 border border-white/5"><Phone size={14} /></div>
+                <div className="p-2 rounded-lg bg-black border border-[#d4a574]/20 shadow-inner transition-all duration-300 group-hover:border-[#d4a574]/50 group-hover:shadow-[0_0_10px_rgba(212,165,116,0.2)]">
+                  <Phone size={14} className="text-zinc-500 group-hover:text-[#d4a574] transition-colors" />
+                </div>
                 +91 887 437 7426
               </a>
             </div>
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/5 flex flex-col items-center justify-between gap-8 md:flex-row">
+        {/* Bottom Bar */}
+        <div className="pt-10 border-t border-[#d4a574]/10 flex flex-col items-center justify-between gap-8 md:flex-row">
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600">
             © 2026 VardhanFlow // All Digital Assets Secured.
           </p>
 
+          {/* Social Icons */}
           <div className="flex gap-4">
             {[
               { icon: Github, url: "https://github.com/pndeyyash-cmd", label: "GitHub" },
@@ -120,18 +133,22 @@ export function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex h-10 w-10 items-center justify-center rounded-xl border border-white/5 bg-white/5 transition-all hover:border-[#d4a574]/40 hover:bg-[#d4a574]/10"
+                className="group relative flex h-10 w-10 items-center justify-center rounded-xl border border-[#d4a574]/20 bg-black shadow-inner transition-all duration-300 hover:border-[#d4a574]/60 hover:shadow-[0_0_15px_rgba(212,165,116,0.2)] hover:-translate-y-1"
                 aria-label={social.label}
               >
                 <social.icon size={18} className="text-zinc-500 transition-colors group-hover:text-[#d4a574]" />
               </a>
             ))}
+            
+            {/* YouTube Custom Icon */}
             <a
               href="https://www.youtube.com/channel/UCS8CRyAxM0zG6hRsVUNhcEw"
               target="_blank"
-              className="group relative flex h-10 w-10 items-center justify-center rounded-xl border border-white/5 bg-white/5 transition-all hover:border-[#d4a574]/40 hover:bg-[#d4a574]/10"
+              rel="noopener noreferrer"
+              className="group relative flex h-10 w-10 items-center justify-center rounded-xl border border-[#d4a574]/20 bg-black shadow-inner transition-all duration-300 hover:border-[#d4a574]/60 hover:shadow-[0_0_15px_rgba(212,165,116,0.2)] hover:-translate-y-1"
+              aria-label="YouTube"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-zinc-500 group-hover:text-[#d4a574]">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-zinc-500 transition-colors group-hover:text-[#d4a574]">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>

@@ -36,7 +36,7 @@ export function Hero() {
             <div className="space-y-6">
               
               {/* THE BADGE */}
-              <div className="inline-flex items-center gap-3 rounded-full border border-[#d4a574]/30 bg-[#d4a574]/5 px-4 py-1.5 md:px-5 md:py-2 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-3 rounded-full border border-[#d4a574]/30 bg-[#d4a574]/5 px-4 py-1.5 md:px-5 md:py-2 backdrop-blur-sm shadow-[0_0_15px_rgba(212,165,116,0.1)]">
                 <div className="relative h-5 w-5 md:h-6 md:w-6 overflow-hidden rounded-full border-2 border-[#d4a574] bg-white">
                   <Image src="/logo.jpg" alt="VF" fill className="object-cover scale-110" />
                 </div>
@@ -45,7 +45,7 @@ export function Hero() {
                 </span>
               </div>
 
-              {/* GORGEOUS WORDMARK VAULT - Fixed Scaling & Fit */}
+              {/* GORGEOUS WORDMARK VAULT - Untouched and perfectly preserved */}
               <div className="w-full max-w-[320px] md:max-w-[480px]"> 
                 <div className="relative aspect-[4/1.2] w-full overflow-hidden rounded-xl md:rounded-2xl border-2 md:border-4 border-[#d4a574] bg-black shadow-[0_0_30px_rgba(212,165,116,0.4)] md:shadow-[0_0_50px_rgba(212,165,116,0.5)] transition-all duration-500 hover:shadow-[#d4a574]/70">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#d4a574]/5 to-transparent pointer-events-none z-10" />
@@ -84,26 +84,42 @@ export function Hero() {
               </a>
               <button
                 onClick={() => scrollToSection('architecture')}
-                className="inline-flex items-center justify-center gap-3 rounded-full border-2 border-[#d4a574]/30 px-8 py-3.5 md:px-12 md:py-4.5 text-xs md:text-sm font-black text-white uppercase tracking-widest transition-all hover:bg-[#d4a574]/10 hover:border-[#d4a574]"
+                className="inline-flex items-center justify-center gap-3 rounded-full border-2 border-[#d4a574]/30 bg-[#d4a574]/5 px-8 py-3.5 md:px-12 md:py-4.5 text-xs md:text-sm font-black text-white uppercase tracking-widest transition-all hover:bg-[#d4a574]/15 hover:border-[#d4a574]/60"
               >
                 Architecture
               </button>
             </div>
           </div>
 
-          {/* Visual Side (Code Card) */}
-          <div className="relative mt-8 md:mt-0">
-            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-b from-[#d4a574]/15 to-transparent blur-xl" />
-            <div className="relative rounded-3xl border border-white/5 bg-black/40 p-6 md:p-10 backdrop-blur-2xl shadow-2xl">
-              <div className="space-y-3 md:space-y-4 font-mono text-[11px] md:text-[13px] leading-relaxed text-zinc-400">
-                <div className="flex items-center gap-2">
-                  <span className="text-[#d4a574]">›</span>
-                  <span className="text-white">VardhanFlow.execute()</span>
+          {/* Visual Side (Code Card - UPGRADED to VardhanFlow Copper Standard) */}
+          <div className="relative mt-12 md:mt-0 w-full max-w-lg mx-auto md:ml-auto">
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-b from-[#d4a574]/20 to-transparent blur-2xl" />
+            <div className="relative rounded-3xl border border-[#d4a574]/30 bg-[#050505]/90 p-8 md:p-10 backdrop-blur-2xl shadow-[0_0_30px_rgba(212,165,116,0.15)] hover:border-[#d4a574]/50 transition-all duration-500">
+              <div className="space-y-4 md:space-y-5 font-mono text-xs md:text-sm leading-relaxed text-zinc-400">
+                
+                <div className="flex items-center gap-3 border-b border-[#d4a574]/20 pb-4">
+                  <span className="text-[#d4a574] font-black text-lg">{'>'}</span>
+                  <span className="text-white font-bold tracking-tight text-base md:text-lg">VardhanFlow<span className="text-[#d4a574]">.</span>execute()</span>
                 </div>
-                <div className="pl-4 border-l border-zinc-800">
-                  <p>Integrating: <span className="text-[#d4a574]">SmartQR</span></p>
-                  <p>Status: <span className="text-green-500 font-bold">Online</span></p>
+                
+                <div className="pl-5 border-l-2 border-[#d4a574]/30 space-y-3 pt-2">
+                  <p className="flex justify-between items-center">
+                    <span className="text-zinc-500">Target Ecosystem:</span> 
+                    <span className="text-white font-medium">Enterprise</span>
+                  </p>
+                  <p className="flex justify-between items-center">
+                    <span className="text-zinc-500">Active Module:</span> 
+                    <span className="text-[#d4a574] font-bold tracking-wide">SmartQR_SaaS</span>
+                  </p>
+                  <div className="flex justify-between items-center pt-3 mt-3 border-t border-white/5">
+                    <span className="text-zinc-500">System Status:</span> 
+                    <span className="inline-flex items-center gap-2 text-emerald-400 font-bold bg-emerald-400/10 px-3 py-1 rounded-full text-[10px] md:text-xs tracking-widest">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      ONLINE
+                    </span>
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
