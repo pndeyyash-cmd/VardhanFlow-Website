@@ -45,21 +45,21 @@ export function Hero() {
                 </span>
               </div>
 
-              {/* GORGEOUS WORDMARK VAULT - Responsive Fix */}
-              <div className="w-full max-w-[320px] md:max-w-[500px]"> 
-                <div className="relative aspect-[3/1] w-full overflow-hidden rounded-xl md:rounded-2xl border-2 md:border-4 border-[#d4a574] bg-black shadow-[0_0_30px_rgba(212,165,116,0.4)] md:shadow-[0_0_50px_rgba(212,165,116,0.5)] transition-all duration-500 hover:shadow-[#d4a574]/70">
+              {/* GORGEOUS WORDMARK VAULT - Fixed Scaling & Fit */}
+              <div className="w-full max-w-[320px] md:max-w-[480px]"> 
+                <div className="relative aspect-[4/1.2] w-full overflow-hidden rounded-xl md:rounded-2xl border-2 md:border-4 border-[#d4a574] bg-black shadow-[0_0_30px_rgba(212,165,116,0.4)] md:shadow-[0_0_50px_rgba(212,165,116,0.5)] transition-all duration-500 hover:shadow-[#d4a574]/70">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#d4a574]/5 to-transparent pointer-events-none z-10" />
                   <Image 
                     src="/wordmark.jpg" 
                     alt="VardhanFlow" 
                     fill 
-                    className="object-contain p-2 brightness-125 contrast-110"
+                    className="object-cover object-center brightness-125 contrast-110 p-[1px]"
                     priority
                   />
                 </div>
               </div>
 
-              {/* TYPOGRAPHY - Scaled for mobile */}
+              {/* TYPOGRAPHY */}
               <h1 className="text-4xl font-black leading-tight tracking-tighter text-white sm:text-6xl lg:text-7xl">
                 The Future of <br className="hidden lg:block"/>
                 <span className="text-[#d4a574] drop-shadow-[0_0_15px_rgba(212,165,116,0.2)]">Digital Flow</span>
@@ -70,7 +70,7 @@ export function Hero() {
               </p>
             </div>
 
-            {/* CALLS TO ACTION - Mobile Optimized Padding */}
+            {/* CALLS TO ACTION */}
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center pt-2">
               <a
                 href="https://wa.me/918874377426"
@@ -91,18 +91,18 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Visual Side (Code Card) - Hidden on very small screens to save space if needed, or kept for style */}
+          {/* Visual Side (Code Card) */}
           <div className="relative mt-8 md:mt-0">
             <div className="absolute -inset-1 rounded-3xl bg-gradient-to-b from-[#d4a574]/15 to-transparent blur-xl" />
             <div className="relative rounded-3xl border border-white/5 bg-black/40 p-6 md:p-10 backdrop-blur-2xl shadow-2xl">
-              <div className="space-y-3 md:space-y-4 font-mono text-[11px] md:text-[13px] leading-relaxed">
+              <div className="space-y-3 md:space-y-4 font-mono text-[11px] md:text-[13px] leading-relaxed text-zinc-400">
                 <div className="flex items-center gap-2">
                   <span className="text-[#d4a574]">›</span>
                   <span className="text-white">VardhanFlow.execute()</span>
                 </div>
-                <div className="pl-4 border-l border-zinc-800 text-zinc-400">
+                <div className="pl-4 border-l border-zinc-800">
                   <p>Integrating: <span className="text-[#d4a574]">SmartQR</span></p>
-                  <p>Status: <span className="text-green-500">Live</span></p>
+                  <p>Status: <span className="text-green-500 font-bold">Online</span></p>
                 </div>
               </div>
             </div>

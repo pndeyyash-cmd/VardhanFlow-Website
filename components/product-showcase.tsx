@@ -55,8 +55,8 @@ export function ProductShowcase() {
           ))}
         </div>
 
-        {/* Main Product Card: SMART QR MENU */}
-        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black shadow-2xl">
+        {/* Main Product Card: SMART QR MENU (ID ADDED HERE) */}
+        <div id="smart-qr-menu" className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black shadow-2xl">
           <div className="grid gap-0 md:grid-cols-2">
             
             {/* Left Content: The Logic */}
@@ -77,7 +77,6 @@ export function ProductShowcase() {
               {/* Specs Table */}
               <div className="mb-12 space-y-6">
                 <div className="rounded-2xl border border-white/5 bg-white/5 p-8 space-y-6">
-                  {/* Setup Tiers */}
                   <div className="space-y-4">
                     <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Base Architecture Setup</h4>
                     <div className="grid gap-3 text-sm">
@@ -98,7 +97,6 @@ export function ProductShowcase() {
 
                   <div className="h-[1px] w-full bg-white/5" />
 
-                  {/* Updates Tiers */}
                   <div className="space-y-4">
                     <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Monthly Orchestration</h4>
                     <div className="grid gap-3 text-sm">
@@ -146,7 +144,6 @@ export function ProductShowcase() {
                   className="object-cover"
                 />
               </div>
-              {/* Future Product Placeholder - Watermark */}
               <div className="absolute bottom-10 right-10 rotate-12 opacity-10">
                 <span className="text-8xl font-black text-white tracking-tighter italic">VARDHAN</span>
               </div>

@@ -18,13 +18,11 @@ export function Footer() {
 
   return (
     <footer className="relative border-t border-[#d4a574]/10 bg-[#050505] px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Ambient background glow */}
       <div className="absolute top-0 right-0 h-[300px] w-[300px] bg-[#d4a574]/5 blur-[100px] pointer-events-none" />
       
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4 mb-20">
           
-          {/* Brand - High Sovereignty Badge */}
           <div className="space-y-6">
             <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="relative h-10 w-10 overflow-hidden rounded-full border border-[#d4a574]/40 bg-white shadow-[0_0_15px_rgba(212,165,116,0.2)] transition-transform group-hover:scale-110">
@@ -42,12 +40,11 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Ecosystem (Product Links) */}
           <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">Ecosystem</h4>
             <ul className="space-y-4 text-xs font-bold uppercase tracking-widest text-zinc-400">
               <li>
-                <button onClick={() => scrollTo('products')} className="transition-colors hover:text-[#d4a574] text-left">
+                <button onClick={() => scrollTo('smart-qr-menu')} className="transition-colors hover:text-[#d4a574] text-left">
                   Smart QR Menus
                 </button>
               </li>
@@ -64,7 +61,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Governance (Refined Navigation) */}
           <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">Governance</h4>
             <ul className="space-y-4 text-xs font-bold uppercase tracking-widest text-zinc-400">
@@ -86,7 +82,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Us - The Direct Link */}
           <div className="space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">Contact Us</h4>
             <div className="space-y-4">
@@ -110,13 +105,11 @@ export function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM TERMINAL */}
         <div className="pt-10 border-t border-white/5 flex flex-col items-center justify-between gap-8 md:flex-row">
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600">
             © 2026 VardhanFlow // All Digital Assets Secured.
           </p>
 
-          {/* Social Links */}
           <div className="flex gap-4">
             {[
               { icon: Github, url: "https://github.com/pndeyyash-cmd", label: "GitHub" },
