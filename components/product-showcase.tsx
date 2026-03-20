@@ -60,7 +60,6 @@ export function ProductShowcase() {
         </div>
 
         {/* Main Product Card: SMART QR MENU */}
-        {/* Added hardware acceleration here to stop the mobile flicker */}
         <div 
           id="smart-qr-menu" 
           className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)] transform-gpu will-change-transform"
@@ -100,12 +99,12 @@ export function ProductShowcase() {
                     </div>
                   </div>
 
-                  {/* RESTORED: Dashed line separator */}
+                  {/* Dashed line separator */}
                   <div className="h-[1px] w-full border-t border-dashed border-[#d4a574]/20" />
 
-                  {/* RESTORED: Part 2: Monthly Orchestration */}
+                  {/* Part 2: Menu Updation*/}
                   <div className="space-y-4">
-                    <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Monthly Orchestration</h4>
+                    <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Menu Updation</h4>
                     <div className="grid gap-3 text-sm">
                       <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
                         <span>Standard Tier</span>
@@ -123,7 +122,7 @@ export function ProductShowcase() {
                   </div>
                 </div>
 
-                {/* RESTORED: Physical Handover Box */}
+                {/* Physical Handover Box */}
                 <div className="p-4 rounded-xl border border-[#d4a574]/10 bg-[#d4a574]/5">
                   <p className="text-[10px] leading-relaxed text-zinc-500 uppercase font-bold tracking-widest text-center">
                     Physical Handover: Premium QR included (Local) | Global: ₹70 Credit
@@ -141,13 +140,10 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: Visual Side */}
+            {/* Right Side: Pure Black, No Ambient Blur */}
             <div className="relative flex items-center justify-center bg-black p-8 sm:p-12 lg:p-16">
               
-              {/* Added Intense Background Glow specifically behind the frame */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#d4a574]/25 blur-[90px] pointer-events-none rounded-full" />
-              
-              {/* The Frame Placeholder - Perfect Fit Zoom & Enhanced Shadow */}
+              {/* The Frame Placeholder - Perfect Fit Zoom & Sharp Outer Drop-Shadow */}
               <div className="relative z-10 aspect-square w-full max-w-[400px] rounded-3xl border border-[#d4a574]/40 bg-black overflow-hidden shadow-[0_0_60px_rgba(212,165,116,0.35)]">
                 <Image
                   src="/vardhanflow_demo.jpeg"
