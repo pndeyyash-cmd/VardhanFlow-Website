@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { CheckCircle2, Zap, Lock, BarChart3, ChevronRight } from 'lucide-react';
+import { Zap, Lock, BarChart3, ChevronRight } from 'lucide-react';
 
 export function ProductShowcase() {
   const scrollToArchitecture = () => {
@@ -56,7 +56,7 @@ export function ProductShowcase() {
         </div>
 
         {/* Main Product Card: SMART QR MENU */}
-        <div id="smart-qr-menu" className="relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)] transition-all duration-500 hover:border-[#d4a574]/50 hover:shadow-[0_0_40px_rgba(212,165,116,0.25)]">
+        <div id="smart-qr-menu" className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)] transition-all duration-500 hover:border-[#d4a574]/50 hover:shadow-[0_0_40px_rgba(212,165,116,0.25)]">
           <div className="grid gap-0 md:grid-cols-2">
             
             {/* Left Content: The Logic */}
@@ -133,19 +133,26 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: The Visual */}
-            <div className="relative min-h-[500px] bg-zinc-900 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#d4a574]/20 to-transparent z-0" />
-              <div className="relative z-10 h-[80%] w-[60%] overflow-hidden rounded-[2.5rem] border-[12px] border-black shadow-[0_0_100px_rgba(212,165,116,0.3)]">
-                <Image
-                  src="/vardhanflow_demo.jpeg"
-                  alt="VardhanFlow Demo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="absolute bottom-10 right-10 rotate-12 opacity-10 pointer-events-none">
-                <span className="text-8xl font-black text-white tracking-tighter italic">VARDHAN</span>
+            {/* Right Side: The NEW Visual (Re-engineered for Square Fit) */}
+            <div className="relative min-h-[600px] bg-zinc-950 flex items-center justify-center overflow-hidden border-l border-[#d4a574]/10">
+              
+              {/* Internal Halos (Replaced text with pure lighting) */}
+              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4a574]/10 via-black to-black" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] bg-[#d4a574]/5 blur-[120px]" />
+
+              {/* The "Glow Border Placeholder" (Re-engineered Square Mount) */}
+              <div className="relative z-10 aspect-square w-[85%] max-w-[450px] rounded-3xl border border-[#d4a574]/30 p-2 shadow-[0_0_60px_rgba(212,165,116,0.2)] bg-black group-hover:border-[#d4a574]/60 transition-colors duration-500">
+                
+                {/* Internal obsidian-mount border */}
+                <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] bg-slate-900 shadow-inner">
+                    <Image
+                        src="/vardhanflow_demo.jpeg" // Assume you have replaced this file on disk with image_5.png
+                        alt="VardhanFlow Sovereign QR frame"
+                        fill
+                        className="object-contain p-3" // p-3 creates a high-tech obsidian mount bezel effect
+                        priority
+                    />
+                </div>
               </div>
             </div>
 
