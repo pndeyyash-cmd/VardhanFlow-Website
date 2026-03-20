@@ -17,7 +17,11 @@ export function ProductShowcase() {
   };
 
   return (
-    <section id="products" className="relative border-t border-[#d4a574]/10 bg-[#0a0a0a] px-4 py-32 sm:px-6 lg:px-8">
+    <section 
+      id="products" 
+      className="relative border-t border-[#d4a574]/10 bg-[#0a0a0a] px-4 py-32 sm:px-6 lg:px-8 transform-gpu will-change-transform"
+      style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
+    >
       {/* Background Ambience */}
       <div className="absolute top-0 left-0 h-full w-full pointer-events-none opacity-20">
         <div className="absolute top-0 right-0 h-[500px] w-[500px] bg-[#d4a574]/5 blur-[120px]" />
@@ -56,7 +60,12 @@ export function ProductShowcase() {
         </div>
 
         {/* Main Product Card: SMART QR MENU */}
-        <div id="smart-qr-menu" className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)]">
+        {/* Added hardware acceleration here to stop the mobile flicker */}
+        <div 
+          id="smart-qr-menu" 
+          className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)] transform-gpu will-change-transform"
+          style={{ WebkitTransform: 'translateZ(0)', transform: 'translateZ(0)' }}
+        >
           <div className="grid gap-0 md:grid-cols-2">
             
             {/* Left Content */}
@@ -72,6 +81,7 @@ export function ProductShowcase() {
               
               <div className="mb-12 space-y-6">
                 <div className="rounded-2xl border border-white/5 bg-white/5 p-8 space-y-6">
+                  {/* Part 1: Base Setup */}
                   <div className="space-y-4">
                     <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Base Architecture Setup</h4>
                     <div className="grid gap-3 text-sm">
@@ -89,6 +99,35 @@ export function ProductShowcase() {
                       </div>
                     </div>
                   </div>
+
+                  {/* RESTORED: Dashed line separator */}
+                  <div className="h-[1px] w-full border-t border-dashed border-[#d4a574]/20" />
+
+                  {/* RESTORED: Part 2: Monthly Orchestration */}
+                  <div className="space-y-4">
+                    <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Monthly Orchestration</h4>
+                    <div className="grid gap-3 text-sm">
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
+                        <span>Standard Tier</span>
+                        <span className="text-white">₹199</span>
+                      </div>
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
+                        <span>Extended Tier</span>
+                        <span className="text-white">₹299</span>
+                      </div>
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
+                        <span>Enterprise Tier</span>
+                        <span className="text-white">₹399</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* RESTORED: Physical Handover Box */}
+                <div className="p-4 rounded-xl border border-[#d4a574]/10 bg-[#d4a574]/5">
+                  <p className="text-[10px] leading-relaxed text-zinc-500 uppercase font-bold tracking-widest text-center">
+                    Physical Handover: Premium QR included (Local) | Global: ₹70 Credit
+                  </p>
                 </div>
               </div>
 
@@ -102,11 +141,14 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: Visual Side (Fixed Mobile Stacking & Zoom) */}
+            {/* Right Side: Visual Side */}
             <div className="relative flex items-center justify-center bg-black p-8 sm:p-12 lg:p-16">
               
-              {/* The Frame Placeholder - Perfect Fit Zoom */}
-              <div className="relative z-10 aspect-square w-full max-w-[400px] rounded-3xl border border-[#d4a574]/40 bg-black overflow-hidden shadow-[0_0_40px_rgba(212,165,116,0.2)]">
+              {/* Added Intense Background Glow specifically behind the frame */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#d4a574]/25 blur-[90px] pointer-events-none rounded-full" />
+              
+              {/* The Frame Placeholder - Perfect Fit Zoom & Enhanced Shadow */}
+              <div className="relative z-10 aspect-square w-full max-w-[400px] rounded-3xl border border-[#d4a574]/40 bg-black overflow-hidden shadow-[0_0_60px_rgba(212,165,116,0.35)]">
                 <Image
                   src="/vardhanflow_demo.jpeg"
                   alt="VardhanFlow QR Frame"
