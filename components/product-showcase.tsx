@@ -60,7 +60,7 @@ export function ProductShowcase() {
           <div className="grid gap-0 md:grid-cols-2">
             
             {/* Left Content: The Logic */}
-            <div className="flex flex-col justify-center p-10 sm:p-16">
+            <div className="relative flex flex-col justify-center p-10 sm:p-16 z-10">
               <div className="mb-6 inline-flex items-center gap-2">
                 <span className="h-[1px] w-8 bg-[#d4a574]" />
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">SaaS Solution</span>
@@ -95,8 +95,7 @@ export function ProductShowcase() {
                     </div>
                   </div>
 
-                  {/* High-contrast dashed line separator */}
-                  <div className="h-[1px] w-full bg-dashed border-t border-[#d4a574]/20" />
+                  <div className="h-[1px] w-full border-t border-dashed border-[#d4a574]/20" />
 
                   <div className="space-y-4">
                     <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Monthly Orchestration</h4>
@@ -126,7 +125,7 @@ export function ProductShowcase() {
 
               <button
                 onClick={scrollToArchitecture}
-                className="group inline-flex items-center justify-center gap-3 rounded-full px-10 py-4 text-sm font-black text-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(212,165,116,0.3)]"
+                className="group relative z-20 inline-flex items-center justify-center gap-3 rounded-full px-10 py-4 text-sm font-black text-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(212,165,116,0.3)]"
                 style={{ background: 'linear-gradient(135deg, #d4a574 0%, #b88a5e 100%)' }}
               >
                 Explore Architecture
@@ -134,26 +133,22 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: The NEW Visual (Re-engineered for Square Fit) */}
-            <div className="relative min-h-[600px] bg-zinc-950 flex items-center justify-center overflow-hidden border-l border-[#d4a574]/10">
-              
-              {/* Internal Halos (Replaced text with pure lighting) */}
-              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4a574]/10 via-black to-black" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] bg-[#d4a574]/5 blur-[120px]" />
+            {/* Right Side: Visual Side (Fixed Bezel and Frame) */}
+            <div className="relative min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
+              {/* Internal Glow Halos */}
+              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4a574]/10 to-black opacity-50" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] bg-[#d4a574]/10 blur-[100px]" />
 
-              {/* The "Glow Border Placeholder" (Re-engineered Square Mount) */}
-              {/* Blue Border Fix: Added outline-none and focus:outline-none */}
-              <div className="relative z-10 aspect-square w-[85%] max-w-[450px] rounded-3xl border border-[#d4a574]/30 p-2 shadow-[0_0_60px_rgba(212,165,116,0.2)] bg-black group-hover:border-[#d4a574]/60 transition-colors duration-500 outline-none focus:outline-none">
-                
-                {/* Internal obsidian-mount border */}
-                <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] bg-slate-900 shadow-inner">
-                    <Image
-                        src="/vardhanflow_demo.jpeg" // Assume you have replaced this file on disk with image_10.png or image_5.png
-                        alt="VardhanFlow Sovereign QR frame"
-                        fill
-                        className="object-contain p-3" // p-3 creates a high-tech obsidian mount bezel effect
-                        priority
-                    />
+              {/* The Placeholder Frame */}
+              <div className="relative z-10 aspect-square w-[80%] max-w-[400px] rounded-[2.5rem] border border-[#d4a574]/40 bg-black p-1 shadow-[0_0_50px_rgba(212,165,116,0.2)]">
+                <div className="relative h-full w-full overflow-hidden rounded-[2.3rem] bg-black">
+                  <Image
+                    src="/vardhanflow_demo.jpeg"
+                    alt="VardhanFlow Sovereign QR"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -166,8 +161,9 @@ export function ProductShowcase() {
           <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.5em]">Future Engineering Pipelines incoming...</p>
         </div>
       </div>
-      {/* Bottom Fade: Smoothly merges black background into next section */}
-      <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
+
+      {/* The Global Bottom Fade-out */}
+      <div className="absolute bottom-0 left-0 h-64 w-full bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none z-10" />
     </section>
   );
 }
