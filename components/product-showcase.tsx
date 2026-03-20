@@ -70,7 +70,6 @@ export function ProductShowcase() {
                 Smart QR <br/> Menu Revolution
               </h3>
               
-              {/* Specs Table */}
               <div className="mb-12 space-y-6">
                 <div className="rounded-2xl border border-white/5 bg-white/5 p-8 space-y-6">
                   <div className="space-y-4">
@@ -103,26 +102,19 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: The Fix */}
-            <div className="relative flex items-center justify-center bg-black p-8 sm:p-12 overflow-hidden">
-              {/* Ambient Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#d4a574]/5 to-transparent" />
+            {/* Right Side: Visual Side (Fixed Bezel and Frame) */}
+            <div className="relative flex items-center justify-center bg-black p-6 sm:p-10 overflow-hidden">
+              {/* High-Contrast Glow - No Blur */}
+              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4a574]/10 to-transparent opacity-40" />
               
-              {/* The Frame Container */}
-              <div className="relative z-10 w-full max-w-[400px] aspect-square group">
-                {/* Glow Ring */}
-                <div className="absolute -inset-1 rounded-[2.5rem] bg-[#d4a574]/20 blur-md opacity-50 group-hover:opacity-100 transition-opacity" />
-                
-                {/* The "Invisible" Image Wrapper */}
-                <div 
-                  className="relative h-full w-full rounded-[2.5rem] border border-[#d4a574]/30 overflow-hidden bg-black shadow-2xl"
-                  style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%)' }}
-                >
+              {/* The Frame Placeholder */}
+              <div className="relative z-10 aspect-square w-full max-w-[380px] rounded-[2rem] border border-[#d4a574]/40 bg-black overflow-hidden shadow-[0_0_40px_rgba(212,165,116,0.2)]">
+                <div className="relative h-full w-full bg-black">
                   <Image
                     src="/vardhanflow_demo.jpeg"
                     alt="VardhanFlow QR Frame"
                     fill
-                    className="object-cover"
+                    className="object-cover scale-105 transition-transform duration-700 group-hover:scale-110"
                     priority
                   />
                 </div>
@@ -131,10 +123,15 @@ export function ProductShowcase() {
 
           </div>
         </div>
+
+        {/* Future Product Teaser */}
+        <div className="mt-12 text-center">
+          <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.5em]">Future Engineering Pipelines incoming...</p>
+        </div>
       </div>
-      
-      {/* Global Bottom Fade */}
-      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
+
+      {/* Seamless Bottom Transition */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
     </section>
   );
 }
