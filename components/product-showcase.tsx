@@ -95,7 +95,8 @@ export function ProductShowcase() {
                     </div>
                   </div>
 
-                  <div className="h-[1px] w-full bg-white/5" />
+                  {/* High-contrast dashed line separator */}
+                  <div className="h-[1px] w-full bg-dashed border-t border-[#d4a574]/20" />
 
                   <div className="space-y-4">
                     <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Monthly Orchestration</h4>
@@ -141,12 +142,13 @@ export function ProductShowcase() {
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] bg-[#d4a574]/5 blur-[120px]" />
 
               {/* The "Glow Border Placeholder" (Re-engineered Square Mount) */}
-              <div className="relative z-10 aspect-square w-[85%] max-w-[450px] rounded-3xl border border-[#d4a574]/30 p-2 shadow-[0_0_60px_rgba(212,165,116,0.2)] bg-black group-hover:border-[#d4a574]/60 transition-colors duration-500">
+              {/* Blue Border Fix: Added outline-none and focus:outline-none */}
+              <div className="relative z-10 aspect-square w-[85%] max-w-[450px] rounded-3xl border border-[#d4a574]/30 p-2 shadow-[0_0_60px_rgba(212,165,116,0.2)] bg-black group-hover:border-[#d4a574]/60 transition-colors duration-500 outline-none focus:outline-none">
                 
                 {/* Internal obsidian-mount border */}
                 <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] bg-slate-900 shadow-inner">
                     <Image
-                        src="/vardhanflow_demo.jpeg" // Assume you have replaced this file on disk with image_5.png
+                        src="/vardhanflow_demo.jpeg" // Assume you have replaced this file on disk with image_10.png or image_5.png
                         alt="VardhanFlow Sovereign QR frame"
                         fill
                         className="object-contain p-3" // p-3 creates a high-tech obsidian mount bezel effect
@@ -164,6 +166,8 @@ export function ProductShowcase() {
           <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.5em]">Future Engineering Pipelines incoming...</p>
         </div>
       </div>
+      {/* Bottom Fade: Smoothly merges black background into next section */}
+      <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
     </section>
   );
 }
