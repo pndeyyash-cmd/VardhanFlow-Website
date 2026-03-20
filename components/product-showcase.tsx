@@ -56,10 +56,10 @@ export function ProductShowcase() {
         </div>
 
         {/* Main Product Card: SMART QR MENU */}
-        <div id="smart-qr-menu" className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)]">
+        <div id="smart-qr-menu" className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)] transition-all duration-500 hover:border-[#d4a574]/50 hover:shadow-[0_0_40px_rgba(212,165,116,0.25)]">
           <div className="grid gap-0 md:grid-cols-2">
             
-            {/* Left Content */}
+            {/* Left Content: The Logic */}
             <div className="flex flex-col justify-center p-10 sm:p-16 relative z-10 bg-black">
               <div className="mb-6 inline-flex items-center gap-2">
                 <span className="h-[1px] w-8 bg-[#d4a574]" />
@@ -70,6 +70,11 @@ export function ProductShowcase() {
                 Smart QR <br/> Menu Revolution
               </h3>
               
+              <p className="mb-10 text-lg font-medium text-zinc-400 leading-relaxed">
+                Empower your hospitality brand with a high-performance digital menu ecosystem.
+              </p>
+
+              {/* Specs Table */}
               <div className="mb-12 space-y-6">
                 <div className="rounded-2xl border border-white/5 bg-white/5 p-8 space-y-6">
                   <div className="space-y-4">
@@ -89,6 +94,33 @@ export function ProductShowcase() {
                       </div>
                     </div>
                   </div>
+
+                  {/* High-contrast dashed line separator */}
+                  <div className="h-[1px] w-full border-t border-dashed border-[#d4a574]/20" />
+
+                  <div className="space-y-4">
+                    <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Monthly Orchestration</h4>
+                    <div className="grid gap-3 text-sm">
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
+                        <span>Standard Tier</span>
+                        <span className="text-white">₹199</span>
+                      </div>
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
+                        <span>Extended Tier</span>
+                        <span className="text-white">₹299</span>
+                      </div>
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
+                        <span>Enterprise Tier</span>
+                        <span className="text-white">₹399</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl border border-[#d4a574]/10 bg-[#d4a574]/5">
+                  <p className="text-[10px] leading-relaxed text-zinc-500 uppercase font-bold tracking-widest text-center">
+                    Physical Handover: Premium QR included (Local) | Global: ₹70 Credit
+                  </p>
                 </div>
               </div>
 
@@ -102,21 +134,26 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: Visual Side (Fixed Bezel and Frame) */}
-            <div className="relative flex items-center justify-center bg-black p-6 sm:p-10 overflow-hidden">
-              {/* High-Contrast Glow - No Blur */}
-              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4a574]/10 to-transparent opacity-40" />
+            {/* Right Side: The NEW Visual (Re-engineered for Square Fit) */}
+            <div className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-black border-l border-[#d4a574]/10">
               
-              {/* The Frame Placeholder */}
-              <div className="relative z-10 aspect-square w-full max-w-[380px] rounded-[2rem] border border-[#d4a574]/40 bg-black overflow-hidden shadow-[0_0_40px_rgba(212,165,116,0.2)]">
-                <div className="relative h-full w-full bg-black">
-                  <Image
-                    src="/vardhanflow_demo.jpeg"
-                    alt="VardhanFlow QR Frame"
-                    fill
-                    className="object-cover scale-105 transition-transform duration-700 group-hover:scale-110"
-                    priority
-                  />
+              {/* Internal Halos (Replaced text with pure lighting) */}
+              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4a574]/10 via-black to-black" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] bg-[#d4a574]/5 blur-[120px]" />
+
+              {/* The "Glow Border Placeholder" (Re-engineered Square Mount) */}
+              {/* Blue Border Fix: Added outline-none and focus:outline-none */}
+              <div className="relative z-10 aspect-square w-[85%] max-w-[450px] rounded-3xl border border-[#d4a574]/30 p-2 shadow-[0_0_60px_rgba(212,165,116,0.2)] bg-black group-hover:border-[#d4a574]/60 transition-colors duration-500 outline-none focus:outline-none">
+                
+                {/* Internal obsidian-mount border */}
+                <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] bg-transparent shadow-inner">
+                    <Image
+                        src="/vardhanflow_demo.jpeg" // Assume you have replaced this file on disk with image_5.png
+                        alt="VardhanFlow Sovereign QR frame"
+                        fill
+                        className="object-fill p-3" // object-fill forces the image to stretch to fit the perfectly square container, removing all gaps
+                        priority
+                    />
                 </div>
               </div>
             </div>
@@ -129,8 +166,7 @@ export function ProductShowcase() {
           <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.5em]">Future Engineering Pipelines incoming...</p>
         </div>
       </div>
-
-      {/* Seamless Bottom Transition */}
+      {/* Seamless Bottom Transition: Fades black parent card into section bottom */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
     </section>
   );
