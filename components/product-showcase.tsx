@@ -56,11 +56,11 @@ export function ProductShowcase() {
         </div>
 
         {/* Main Product Card: SMART QR MENU */}
-        <div id="smart-qr-menu" className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)] transition-all duration-500 hover:border-[#d4a574]/50 hover:shadow-[0_0_40px_rgba(212,165,116,0.25)]">
+        <div id="smart-qr-menu" className="group relative overflow-hidden rounded-[2rem] border border-[#d4a574]/30 bg-black shadow-[0_0_30px_rgba(212,165,116,0.15)]">
           <div className="grid gap-0 md:grid-cols-2">
             
-            {/* Left Content: The Logic */}
-            <div className="relative flex flex-col justify-center p-10 sm:p-16 z-10">
+            {/* Left Content */}
+            <div className="flex flex-col justify-center p-10 sm:p-16 relative z-10 bg-black">
               <div className="mb-6 inline-flex items-center gap-2">
                 <span className="h-[1px] w-8 bg-[#d4a574]" />
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#d4a574]">SaaS Solution</span>
@@ -70,62 +70,32 @@ export function ProductShowcase() {
                 Smart QR <br/> Menu Revolution
               </h3>
               
-              <p className="mb-10 text-lg font-medium text-zinc-400 leading-relaxed">
-                Empower your hospitality brand with a high-performance digital menu ecosystem.
-              </p>
-
               {/* Specs Table */}
               <div className="mb-12 space-y-6">
                 <div className="rounded-2xl border border-white/5 bg-white/5 p-8 space-y-6">
                   <div className="space-y-4">
                     <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Base Architecture Setup</h4>
                     <div className="grid gap-3 text-sm">
-                      <div className="flex justify-between items-center text-zinc-400">
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
                         <span>Standard (&lt;100 items)</span>
-                        <span className="font-bold text-white">₹599</span>
+                        <span className="text-white">₹599</span>
                       </div>
-                      <div className="flex justify-between items-center text-zinc-400">
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
                         <span>Extended (100–300 items)</span>
-                        <span className="font-bold text-white">₹699</span>
+                        <span className="text-white">₹699</span>
                       </div>
-                      <div className="flex justify-between items-center text-zinc-400">
+                      <div className="flex justify-between items-center text-zinc-400 font-bold uppercase tracking-widest text-[10px]">
                         <span>Enterprise (300+ items)</span>
-                        <span className="font-bold text-white">₹799</span>
+                        <span className="text-white">₹799</span>
                       </div>
                     </div>
                   </div>
-
-                  <div className="h-[1px] w-full border-t border-dashed border-[#d4a574]/20" />
-
-                  <div className="space-y-4">
-                    <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[#d4a574]">Monthly Orchestration</h4>
-                    <div className="grid gap-3 text-sm">
-                      <div className="flex justify-between items-center text-zinc-400">
-                        <span>Standard Tier</span>
-                        <span className="font-bold text-white">₹199</span>
-                      </div>
-                      <div className="flex justify-between items-center text-zinc-400">
-                        <span>Extended Tier</span>
-                        <span className="font-bold text-white">₹299</span>
-                      </div>
-                      <div className="flex justify-between items-center text-zinc-400">
-                        <span>Enterprise Tier</span>
-                        <span className="font-bold text-white">₹399</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-4 rounded-xl border border-[#d4a574]/10 bg-[#d4a574]/5">
-                  <p className="text-[10px] leading-relaxed text-zinc-500 uppercase font-bold tracking-widest text-center">
-                    Physical Handover: Premium QR included (Local) | Global: ₹70 Credit
-                  </p>
                 </div>
               </div>
 
               <button
                 onClick={scrollToArchitecture}
-                className="group relative z-20 inline-flex items-center justify-center gap-3 rounded-full px-10 py-4 text-sm font-black text-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(212,165,116,0.3)]"
+                className="group inline-flex items-center justify-center gap-3 rounded-full px-10 py-4 text-sm font-black text-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(212,165,116,0.3)]"
                 style={{ background: 'linear-gradient(135deg, #d4a574 0%, #b88a5e 100%)' }}
               >
                 Explore Architecture
@@ -133,20 +103,26 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: Visual Side (Fixed Bezel and Frame) */}
-            <div className="relative min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
-              {/* Internal Glow Halos */}
-              <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#d4a574]/10 to-black opacity-50" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] bg-[#d4a574]/10 blur-[100px]" />
-
-              {/* The Placeholder Frame */}
-              <div className="relative z-10 aspect-square w-[80%] max-w-[400px] rounded-[2.5rem] border border-[#d4a574]/40 bg-black p-1 shadow-[0_0_50px_rgba(212,165,116,0.2)]">
-                <div className="relative h-full w-full overflow-hidden rounded-[2.3rem] bg-black">
+            {/* Right Side: The Fix */}
+            <div className="relative flex items-center justify-center bg-black p-8 sm:p-12 overflow-hidden">
+              {/* Ambient Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#d4a574]/5 to-transparent" />
+              
+              {/* The Frame Container */}
+              <div className="relative z-10 w-full max-w-[400px] aspect-square group">
+                {/* Glow Ring */}
+                <div className="absolute -inset-1 rounded-[2.5rem] bg-[#d4a574]/20 blur-md opacity-50 group-hover:opacity-100 transition-opacity" />
+                
+                {/* The "Invisible" Image Wrapper */}
+                <div 
+                  className="relative h-full w-full rounded-[2.5rem] border border-[#d4a574]/30 overflow-hidden bg-black shadow-2xl"
+                  style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%)' }}
+                >
                   <Image
                     src="/vardhanflow_demo.jpeg"
-                    alt="VardhanFlow Sovereign QR"
+                    alt="VardhanFlow QR Frame"
                     fill
-                    className="object-contain"
+                    className="object-cover"
                     priority
                   />
                 </div>
@@ -155,15 +131,10 @@ export function ProductShowcase() {
 
           </div>
         </div>
-
-        {/* Future Product Teaser */}
-        <div className="mt-12 text-center">
-          <p className="text-[10px] font-bold text-zinc-600 uppercase tracking-[0.5em]">Future Engineering Pipelines incoming...</p>
-        </div>
       </div>
-
-      {/* The Global Bottom Fade-out */}
-      <div className="absolute bottom-0 left-0 h-64 w-full bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none z-10" />
+      
+      {/* Global Bottom Fade */}
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
     </section>
   );
 }
