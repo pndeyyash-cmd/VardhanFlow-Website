@@ -131,7 +131,7 @@ export function ProductShowcase() {
                   </div>
                   <div className="p-3 rounded-xl border border-[#d4a574]/20 bg-transparent">
                     <p className="text-[9px] leading-relaxed text-[#d4a574] uppercase font-bold tracking-widest text-center">
-                      Includes 1 Premium Physical Stand. Additional Units at ₹70/QR.
+                      Includes 1 Premium Physical QR. Additional Units at ₹70/QR.
                     </p>
                   </div>
                 </div>
