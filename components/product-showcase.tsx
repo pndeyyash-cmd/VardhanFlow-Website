@@ -125,13 +125,13 @@ export function ProductShowcase() {
                 {/* Physical Handover & Add-ons */}
                 <div className="space-y-3">
                   <div className="p-4 rounded-xl border border-[#d4a574]/10 bg-[#d4a574]/5">
-                    <p className="text-[10px] leading-relaxed text-zinc-500 uppercase font-bold tracking-widest text-center">
+                    <p className="text-[10px] leading-relaxed text-[#d4a574] uppercase font-bold tracking-widest text-center">
                       Physical Handover: Premium QR included (Local) | Global: ₹70 Credit
                     </p>
                   </div>
                   <div className="p-3 rounded-xl border border-[#d4a574]/20 bg-transparent">
                     <p className="text-[9px] leading-relaxed text-[#d4a574] uppercase font-bold tracking-widest text-center">
-                      Includes 1 Premium Physical QR. Additional Units at ₹70/QR.
+                      Includes 1 Premium Physical Stand. Additional Units at ₹70/QR.
                     </p>
                   </div>
                 </div>
