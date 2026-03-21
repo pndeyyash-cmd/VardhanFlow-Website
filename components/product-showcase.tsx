@@ -147,16 +147,16 @@ export function ProductShowcase() {
               </button>
             </div>
 
-            {/* Right Side: Pure Black, No Ambient Blur */}
+           {/* Right Side: Pure Black, No Ambient Blur */}
             <div className="relative flex items-center justify-center bg-black p-8 sm:p-12 lg:p-16">
               
-              {/* The Frame Placeholder - Perfect Fit Zoom & Sharp Outer Drop-Shadow */}
-              <div className="relative z-10 aspect-square w-full max-w-[400px] rounded-3xl border border-[#d4a574]/40 bg-black overflow-hidden shadow-[0_0_60px_rgba(212,165,116,0.35)]">
+              {/* The Frame Placeholder - Floating Hover Effect (No Cropping) */}
+              <div className="relative z-10 aspect-square w-full max-w-[400px] rounded-3xl border border-[#d4a574]/40 bg-black overflow-hidden shadow-[0_0_60px_rgba(212,165,116,0.35)] transition-all duration-700 group-hover:shadow-[0_0_90px_rgba(212,165,116,0.5)] group-hover:-translate-y-3">
                 <Image
                   src="/vardhanflow_demo.jpeg"
                   alt="VardhanFlow QR Frame"
                   fill
-                  className="object-cover scale-[1.05] transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover"
                   priority
                 />
               </div>
